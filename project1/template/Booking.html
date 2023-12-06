@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: beige;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            display: block;
+            width: 8%;
+            margin-left: 45%;
+            margin-right:50%
+            
+        }
+        input[type="text"],select,input[type="date"]{
+            margin: 10%;
+            width:250%;
+            height:5%;
+            border-radius:0.5em;
+        }
+        button{
+            margin: 10%;
+            width:180%;
+            height:5%;
+            background-color: cadetblue;
+            border-radius:1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_table}}
+        <button type="submit">BOOK HERE</button>
+    </form>
+    </div>
+</body>
+</html>
